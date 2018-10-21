@@ -1,5 +1,11 @@
 # Test Flight :: Change log
 
+* 2016-0411: 1.5.4.4 (jwvanderbeck) for KSP 1.0.5
+	+ 1.5.4.4
+	+ KSP Version
+	+ KSP 1.0.5
+	+ Changes
+		- FIX: Fix R&D teams eating up insane amount of funds due to no research having been active for very long times
 * 2016-0409: 1.5.4.3 (jwvanderbeck) for KSP 1.0
 	+ 1.5.4.3
 	+ KSP Version
