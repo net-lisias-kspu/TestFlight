@@ -1,5 +1,35 @@
 # Test Flight :: Change log
 
+* 2015-0203: 0.4.5-Stock (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ Alpha Release
+		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
+	+ Highlights
+		- Initial release of TestFlight with Realism Overhaul compatibility
+		- Support for MFT/RF ModuleEngineConfig system
+		- Support for Technology Transfer from part to part
+		- Initial configs for RealismOverhaul
+	+ Stock & Realism Overhaul Support
+	+ As of this release, TestFlight now officially supports Realism Overhaul.  Currently configs exist for only a single part, the Aerobee engine line.  Each version of the Aerobee has different failure rates based on real data, and tech transfer exists throughout the line.  Feedback on this is most appreciated!
+	+ Moving forward there will be separate releases for Stock and Realism Overhaul so that each contains the correct configs.  Choose the one you want and download that.  They will be clearly marked as Stock or Realism Overhaul.
+	+ They both are the same code and the same Plugins, it is just the ModuleManager configs that differ.
+	+ Change Log
+		- All TestFlight modules can now use a new property `configuration`.  If specified TestFlight will only enable that module if the part's currently active MFT/RF configuration matches the specified value.  This allows configuration of ModuleEngineConfig parts as if they were their own separate parts.
+		- DataRecorder runs off `operatingTime` now and therefore will not record data if the part is in a failed state
+			- API: Added new methods for retrieving TestFlight modules on a part.
+			- New Module: Added new Failure module, TestFlightFailure_IgnitionFail which is works a bit different than most, and would be considered a FailureTrigger module.  It monitors for an engine to change states from not ignited, to ignited, and applies a chance for that ignition to fail.  This chance is based on FlightData and the curve can be configured in .cfg file.
+		- Initial configs for RO starting with the WAC-Corporal/Aerobee engine line.
+		- `operatingTime` is no longer capped at MTBF so parts can still fail after MTBF has passed
+		- Added new class to TestFlightAPI to wrap up the annoying duality of ModuleEngines and ModulesEnginesFX
+		- New property added to all Module Interfaces `TestFlightEnabled` determines if the module is currently running under TestFlight
+		- Fixed bug with "0 time to repair" failures not giving the Repair Button
+		- Fixed bug with failures that had no repair config breaking the system
+		- Added Technology Transfer system that allows partial flight data to transfer from one part to another part that is considered to be a related technology path.
+		- Swapped to using System.Random for random numbers since apparently KSP spews out the same random sequence each time you load a game.
+		- Added instance of System.Random to TestFlightCore and TestFlightManagerScenario for use by other modules.
+		- Fixed issue #16 - parts continue to accrue operating time even when failed
+		- Fixed issue #19 - operating time wasn't respecting IsPartOperating
+		- More adjustments to MSD window size to avoid horizontal scrolling
+		- Updates to build system to allow building Stock and RealismOverhaul configs as needed
 * 2015-0203: 0.4.5.1-RealismOverhaul (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ Alpha Release
 		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
