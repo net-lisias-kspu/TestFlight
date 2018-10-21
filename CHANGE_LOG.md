@@ -1,5 +1,24 @@
 # Test Flight :: Change log
 
+* 2015-0511: 1.3.0.11 (jwvanderbeck) for KSP 1.0 PRE-RELEASE
+	+ TestFlight v1.3 Experimental (1.3.0.11)
+		- This is an experimental development release and should only be used to provide testing feedback
+		- Things to test
+	+ If you are helping test this experimental, thank you!.  Things to look for:
+		- NOTE: For proper testing of this build, it should be tested on a normal live save game.  However please make a backup of your save game first!
+	+ 1. This version is a major change to how data is stored in KSP's persistent.sfs file, and would normally be save game breaking. However I have added code to automatically migrate the saved data from the old format to the new format the first time you load and then save your game. Easiest way to do this is just load your game, then immediately exit to the main menu.
+	+ 2. Everything should work exactly as before, with the obvious difference being no more scopes.
+	+ Change Log
+			- NEW: Added `maxData` property to TestFlightCore to indicate the maximum amount of flight data the part can obtain.  This is a required value for all parts, or else the maximum data will be 0!
+			- NEW: Added stock resource tank configs
+			- NEW: Flight data caps out at `maxData` as defined by the TestFlightCore. Closes #68
+			- NEW: Added default savegame settings
+			- NEW: Updated SaveData API to allow passing a default value to be used in the case where the saved data could not be found or converted to type
+			- NEW: `maxData` properly add to all RealismOverhaul engine configs (Thanks @NathanKelll)
+			- FIX: Stock: Don't treat command pods with resources as resource tanks
+			- FIX: Updated AVC .version to KSP 1.0
+			- NEW: Failure_ReducedMaxThrust now supports new KSP 1.0 engines as well as RF EngineSolver engines
+			- NEW: No longer use FAR (when installed) to get atmospheric density, as KSP 1.0 has proper values now
 * 2015-0501: 1.3.0.10 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ TestFlight v1.3 Experimental (1.3.0.10)
 		- This is an experimental development release and should only be used to provide testing feedback
