@@ -1,5 +1,13 @@
 # Test Flight :: Change log
 
+* 2015-0517: 1.3.0.15 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ TestFlight v1.3 Release Candidate 3 (1.3.0.15)
+	+ KSP 1.0.2 Compatible
+	+ Important Note:
+	+ Version 1.3 of TestFlight is potentially save-game breaking.  The underlying scenario data store has changed.  While v1.3 includes code to automatically upgrade previous 1.2 save games, it might not always work.
+	+ Change Log
+		- FIX: Fixed incorrect case comparison when checking if a failure module is disabled.  (Thanks @magico13)
+		- FIX: Fixed NRE when TriggerFailure can't find any failure modules. (Thanks @magico13)
 * 2015-0516: 1.3.0.13 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ TestFlight v1.3 Release Candidate 2 (1.3.0.13)
 	+ KSP 1.0.2 Compatible
