@@ -1,5 +1,11 @@
 # Test Flight :: Change log
 
+* 2016-0502: 1.6.0.1 (jwvanderbeck) for KSP 1.1.2
+	+ 1.6.0.1
+	+ KSP Version
+	+ KSP 1.1.2
+	+ Changes
+		- Recompiled for RealFuels v11.0 for KSP 1.1.2
 * 2016-0501: 1.6.0.0 (jwvanderbeck) for KSP 1.1.2
 	+ 1.6.0.0
 	+ KSP Version
