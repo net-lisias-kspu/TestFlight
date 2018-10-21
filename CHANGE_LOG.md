@@ -1,5 +1,11 @@
 # Test Flight :: Change log
 
+* 2016-0520: 1.6.0.3 (jwvanderbeck) for KSP 1.1.2
+	+ 1.6.0.3
+	+ KSP Version
+	+ KSP 1.1.2
+	+ Changes
+		- FIX: Fix bug preventing TestFlight from adding rated burn time to RealFuels GUI when an existing MEC description already existed.
 * 2016-0515: 1.6.0.2 (jwvanderbeck) for KSP 1.1.2
 	+ 1.6.0.2
 	+ KSP Version
