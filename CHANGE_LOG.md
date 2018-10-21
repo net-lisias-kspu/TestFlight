@@ -1,5 +1,69 @@
 # Test Flight :: Change log
 
+* 2015-0128: 0.4.0 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ Alpha Release
+		- This is an early alpha development release and thus should be assumed to be buggy, and capable of breaking your game and game saves.  Please do not test this in a game save that you care about!
+		- IMPORTANT NOTE Due to many changes in how settings are handled, and stored, as well as the removal and addition of different settings than previous releases, please completely delete any previous install of TestFlight before installing this version.  In addition it is _highly recommended_ to start a new save game for this release.
+	+ Highlights
+		- TestFlight API completely overhauled and is not backwards compatible
+		- Totally rewritten underlying core systems
+		- Migrated from a polling "pull" style system to a "push" style system where the individual parts are responsible for their own state, and the core manager/GUI only asks for that state when needed to update the GUI or save to disk
+		- Brand new Editor Window allows you to inspect your parts while building.
+		- Initial implementation of new Mean Time Between Failure (MTBF) system.
+	+ MTBF System
+	+ Some things to understand about the new MTBF system.
+	+ 1. MTBF does not mean time until failure.  A MTBF of 60 seconds does not mean your part will fail in 60 seconds.  It could fail well before 60s or well after 60s.  But on average it will fail sometime around 60s.  Maybe.
+	+ 2. Probability is a bitch.  Just because something is highly unlikely does not mean it is impossible.
+	+ Important testing in this update is "How does it feel?".  I know this is subjective and everyone will have a different opinion, but please let me know how it feels to you.  Both on early flights, and later flights once your parts have gained reliability.  I have some knobs I can tune.
+		- [Image of TestFlightEditorWindow](http://i.imgur.com/xDKU0P6.png)
+	+ In the VAB you will now see TestFlight on the AppLauncher.  Click to open the Editor Window.  The Editor Window will show you details on your parts so you can make decisions on what to use on your craft.  It shows you the flight data and reliability of the part for all scopes with recorded flight data.
+	+ To use:
+	+ 1. Open the window by clicking the TestFlight icon in the AppLauncher bar
+	+ 2. Mouse over parts in the parts bin on the left.  As you mouse over parts, you will see that part's data in the window.
+	+ 3. Right click a part in the parts bin to lock the window to that part.  Once locked, you can move your mouse wherever and it will continue to show the data from the locked part.  Right click th same part again to unlock the window, or right click a new part to change the lock to that part.
+	+ 4. Left clicking a part to add it to the craft will automatically unlock the window if it is locked.
+	+ As with the main TestFlight window, you can click the "Lock Window" button to lock or unlock the window to the dock.  If unlocked, you can position it wherever you want.
+	+ API Changes
+			- The TestFlight API is not backwards compatible with previous versions
+	+ This release contains a completely overhauled API.  If you have written a module for TestFlight it will need to be updated to use the new API.
+	+ The good news is that while the API got a lot more flexible and a lot more powerful,most of the changes _for now_ are in the Core, not the plugin modules.  Changes to compile against this release will probably be minor.
+	+ Change Log
+			- Rewrote core scenario code.  TestFlightManagerScenario is now only a data store for the persistent data, and contains no appreciable game logic
+			- Redesigned TestFlightCore API to accommodate both the new "push" method as well as upcoming changes to the underlying reliability and failure architecture
+			- Flight Data and Flight Time now stored as doubles
+			- Implemented brand new Test Flight API
+			- Changes to ITestFlightCore interface
+			- Changes to ITestFlightDataRecorder interface
+			- Changes to ITestFlightReliability interface
+			- Core system refreshes status more often now that there is less of a performance hit
+			- Changed method of configuring how FlightData converts into Reliability in the config files.  This is now done using a FloatCurve which allows the modder to make it as simple or as complex as desired
+			- Fixed a bug that caused reliability to not load properly when going through the VAB with a craft
+			- Fixed a bug causing "sub" modules to load before the Core and therefore never attaching properly
+			- Added new Editor Window to see part's flight data and reliability while building
+			- Defer loading of prefab data to Start() in case KSP is being slothful.  Should fix reliability not loading correctly in Flight.
+			- Initial implementation of new MTBF system
+			- MSD now shows MTBF
+			- MSD now shows Failure Rate
+			- Make font in MSD smaller, and adjusted window to accommodate new data
+			- Updated settings pane in MSD to remove no longer used settings, and rename/tweak ones that are left.
+			- New Reflection Interface for other mods to integrate with TestFlight.  This is still a WIP and feedback is more than welcome.
+			- Fix issue #11 - Settings Dropdown List hard to read
+			- Fix issues #14 - Data rate multiplier being incorrectly applied and giving zillions of data units (or none!)
+			- New API methods to allow repairs to take time to complete
+			- Expanded Reflection Interface and API
+			- MSD can now show failure rate in addtion to MTBF
+			- failure rate in MSD now properly shows the 'worst' momentary failure rate
+			- DataRecorder modules can now control when a part is considered "operating"
+			- Mission time is now calculated from activation of first stage, not from MET which KSP does not start until you leave the pad.  This means two main things.
+				- Engine test stands are a thing
+				- The practice of igniting your first stage before releasing the launch clamps is a good one, to ensure you engine(s) are ignited and running properly.
+			- Added new Reliability module that increase the failure rate of an engine for the first 5 seconds after ignition.  This is also a sample of the power of the new system to do things like this!  Currently enabled on liquid engines.
+			- Added new API methods to control flow of Flight Data
+				- SetDataRateLimit()
+				- SetDataCap()
+			- Changed failure checks to be a constant chance of failure, rather than increasing towards MTBF
+			- Added Travis CI integration for continuous integration testing of commits, and automated builds.
+			- TestFlight configs are now built in JSON and then compiled to standard ModuleManager config format upon build and release.  This standardizes the configs, as well as makes them easier to write by removing redundancy and allowing re-use of setups.
 * 2015-0126: 0.4.0e7 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ Experimental Release
 		- This is an experimental release of a development branch.  This version is released to allow people to test upcoming changes and should be considered unstable and buggy.  Do not use an experimental release in any save you care about.
