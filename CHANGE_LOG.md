@@ -1,5 +1,21 @@
 # Test Flight :: Change log
 
+* 2015-0426: 1.3.0.4 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ TestFlight v1.3 Experimental (1.3.0.4)
+		- This is an experimental development release and should only be used to provide testing feedback
+		- Things to test
+	+ If you are helping test this experimental, thank you!.  Things to look for:
+		- NOTE: For proper testing of this build, it should be tested on a normal live save game.  However please make a backup of your save game first!
+	+ 1. This version is a major change to how data is stored in KSP's persistent.sfs file, and would normally be save game breaking. However I have added code to automatically migrate the saved data from the old format to the new format the first time you load and then save your game. Easiest way to do this is just load your game, then immediately exit to the main menu.
+	+ 2. Everything should work exactly as before, with the obvious difference being no more scopes.
+	+ Change Log
+			- API: new API stubs for interrogating scenario data store
+			- NEW Feature: ContractConfigurator support.  TestFlight now supports ContractConfigurator and adds a new parameter for requiring the player to collect a given amount of flight data on a given part.  TestFlight now supports ContractConfigurator but there are not any contracts that currently use this feature.  These will hopefully come in the future.  If you want to make some, please let me know and I can help you out.
+			- NEW: Property added to TestFlightCore `startFlightData` that can be used to indicate that a part should start with a given amount of existing flight data
+			- NEW: TestFlightScenario available in all scenes
+			- FIX: Target .NET 3.5 for ContractConfigurator plugin
+			- FIX: ContractConfigurator only display data remaining if some data has been collected
+			- FIX: ContractConfigurator don’t try to validate part string during initial load, as we won’t have a scenario available then
 * 2015-0403: 1.3.0.3 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ TestFlight v1.3 Experimental (1.3.0.3)
 		- This is an experimental development release and should only be used to provide testing feedback
