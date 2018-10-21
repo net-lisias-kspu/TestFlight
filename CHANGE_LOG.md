@@ -1,5 +1,9 @@
 # Test Flight :: Change log
 
+* 2015-0102: 0.2.1 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ This is an alpha release and thus should be assumed to be buggy, and capable of breaking your game and game saves.
+		- Fixed Master Status Display not showing some failures
+		- Fixed (hopefully) configs for Stock parts
 * 2015-0108: 0.2.1e2 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ This is an EXPERIMENTAL release.  Experimental releases are very much "development snapshots" and are released for the express purpose of getting user feedback or testing on a very specific bug or feature that is being worked on.  If testing an experimental release, please limit feedback to the scope of that release.
 	+ This is an alpha release and thus should be assumed to be buggy, and capable of breaking your game and game saves.
