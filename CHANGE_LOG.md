@@ -1,5 +1,12 @@
 # Test Flight :: Change log
 
+* 2016-0515: 1.6.0.2 (jwvanderbeck) for KSP 1.1.2
+	+ 1.6.0.2
+	+ KSP Version
+	+ KSP 1.1.2
+	+ Changes
+		- Version 1.6 is now officially the main release.  Support for TestFlight 1.5 and KSP 1.0 will be for hotfixes only from this point forward.
+			- UPDATE: Recompiled for RealFuels 11.2
 * 2016-0502: 1.6.0.1 (jwvanderbeck) for KSP 1.1.2
 	+ 1.6.0.1
 	+ KSP Version
