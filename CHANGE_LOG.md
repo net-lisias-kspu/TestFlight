@@ -1,5 +1,25 @@
 # Test Flight :: Change log
 
+* 2016-0705: 1.7.0.0 (jwvanderbeck) for KSP 1.1.3
+	+ 1.7.0.0
+	+ KSP Version
+	+ KSP 1.1.3
+	+ Changes
+		- Lots of work on reducing TestFlight's Garbage footprint
+		- Performance improvements
+			- FIX: When assigning R&D to a part, first immediately apply any applicable tech transfer data
+			- FIX: KSC TestFlight window is now available even if TestFlight is disabled in that save
+			- FIX: Cleaned up left over direct log statements that were polluting the output_log file
+			- FIX: Fix NRE in TestFlightCore outside of Flight scene
+			- FIX: Fix how modules are enabled and disabled due to interop changes that was causing some modules to never become active when they should
+			- FIX: Fix NRE in the TestFlight Editor window.
+			- FIX: Fix issue with part selection locking for R&D Window in Editor
+			- CHANGE: TechTransfer and MaxRnD now stack
+			- FIX: Cleaned up left over direct log statements that were polluting the output_log file
+			- FIX: KSC TestFlight window is now available even if TestFlight is disabled in that save.
+			- FIX: When assigning R&D to a part, first immediately apply any applicable tech transfer data
+			- UPDATE: Recompiled for KSP 1.1.3
+			- UPDATE: Recompiled for RealFuels 11.3.0
 * 2016-0525: 1.6.0.4.beta-1 (jwvanderbeck) for KSP 1.1.2 PRE-RELEASE
 	+ 1.6.0.4 Beta 1
 		- Beta Release
