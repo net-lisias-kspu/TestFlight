@@ -1,5 +1,71 @@
 # Test Flight :: Change log
 
+* 2015-0518: 1.3.1.0 (jwvanderbeck) for KSP 1.0
+	+ Test Flight v1.3.1.0
+	+ Highlights
+		- KSP v1.0.2 Compatible
+		- No more scope
+	+ As of v1.3, the concept of flight scope has been removed form TestFlight.  This means that part reliability and flight data are universal.  Removal of scope reduced the complexity of the code, but more importantly opened up things for coming soon features that simply couldn't be done well while scope was there.  It made things too complex for the player.
+		- ContractConfigurator Support
+	+ TestFlight now supports ContractConfigurator by adding a new contract goal to gather flight data on a part.  This allows contract authors to add flight testing!  _NOTE:_ While the support is there, currently no contracts actually use it.
+		- Stock Configs
+	+ This version of TestFlight introduces some basic preliminary config files to support Stock parts for everyone who wanted to play with TestFlight but don't play RealismOverhaul.  More fleshed out configs will come later and i'm really hoping I can enlist some community help on these, as I personally don't play stock.
+		- TestFlight Plugin, and Config Packs
+	+ TestFlight is now distributed in pieces consisting of one ZIP file for the core plugin, without any configs, and then separate config packs, currently for RealismOverhaul and Stock.  _NOTE:_ Under this new model, you must make sure to download and extract both the core plugin and one config pack.
+	+ There may be some initial hiccups on CKAN due to this change, as it isn't possible for me to test it 100% before releasing.  Any issues I will endeavor to fix as quickly as possible.  Please let me know if you run into any problems!
+	+ Change Log
+			- API: new API stubs for interrogating scenario data store
+			- GAME-PLAY: The concept of '_scope_' no longer applies, and data and reliability is universal. This is a major change that paves the way for newer features coming soon.
+			- CONFIGS - ALL: Updated reliability configs to use noscope format
+			- NEW: ContractConfigurator support.  TestFlight now creates a new Contract goal for gaining flight data on a part.  This allows contract authors to incorporate flight testing into contracts.
+			- FIX: Fixed data type errors in noscope api changes. Added data overloads for float, int, bool, and double
+			- NEW: Property added to TestFlightCore `startFlightData` that can be used to indicate that a part should start with a given amount of existing flight data
+			- NEW: TestFlightScenario available in all scenes
+			- FIX: ContractConfigurator don’t try to validate part string during initial load, as we won’t have a scenario available then
+			- FIX: ContractConfigurator only display data remaining if some data has been collected
+			- KSP: Updated and compiled for KSP v1.0.0
+			- NEW: TestFlight now distributed as multiple files, with a core Plugin Only distribution and multiple Config Packs, currently for RealismOverhaul and Stock.
+			- FIX: If TestFlight title property is not defined or blank, use the part's stock title instead
+			- FIX: Fix possible infinite loop when the TestFlightCore had a configuration without query in it
+			- NEW: Allow any module to have a blank or undefined config. In such cases it is considered always active
+			- CONFIGS - STOCK: Added RT5, RT10, BACC, and Kickback solid boosters
+			- CONFIGS - STOCK: Added: LV-T30, LV-T45, LV-909, Poodle, Skipper, Mainsail liquid engines
+			- CONFIGS - RO: WAC-Corporal and XLR11 engines start fully tested
+			- CONFIGS - STOCK: Fixed incorrect configuration tags on stock solid engines
+			- CONFIGS - STOCK: First tier stock liquid and solid engines start at max data
+		- already researched
+			- API: Added API to TestFlightManager for persisting arbitrary data for a save game
+			- NEW: Added per save game settings
+			- NEW: Parts can be set to always be at maximum flight data in a specific save game
+			- NEW: TestFlight can be enabled or disabled on a per save game basis
+			- FIX: When part’s start at MaxData they start at properly the maximum data defined by the  ReliabilityCurve and not some insane high value.
+			- FIX: NREs caused by save game without existing data store
+			- NEW: Added save game settings to the KSC level TestFlight settings window
+			- FIX: Engines would continue gaining data when shutown. Engines now use finalThrust to determine running state
+			- NEW: Added `maxData` property to TestFlightCore to indicate the maximum amount of flight data the part can obtain.
+			- CONFIGS - STOCK: Added stock resource tank configs
+			- NEW: Flight data caps out at `maxData` as defined by the TestFlightCore. Closes #68
+			- CONFIGS - STOCK: Add maxData to all the stock engine configs
+			- NEW: Added default savegame settings
+			- API: Updated SaveData API to allow passing a default value to be used in the case where the saved data could not be found or converted to type
+			- CONFIGS - RO: Added proper `maxData` lines to all existing RO engine configs (Thanks @NathanKell!)
+			- CONFIGS - STOCK: Don't treat command pods with resources as resource tanks
+			- FIX: Updated AV .version to KSP 1.0
+			- NEW: Updated build system to include a version file for configs
+			- NEW: Split core and config packs into separate netkans
+			- FIX: Updated ReducedThrust code to work with FuelFlow (Reducing fuel flow results in loss of thrust) for KSP 1.0
+			- NEW: Failure_ReducedMaxThrust now supports new KSP 1.0 engines as well as RF EngineSolver engines- Refactored EngineModuleWrapper to no longer split between ModuleEngines and ModuleEnginesFX, and to support new EngineSolverengines such as ModuleEnginesRF
+			- FIX: No longer use FAR (when installed) to get atmospheric density, as KSP 1.0 has proper values now
+			- NEW: Compiled for KS 1.0.2
+			- NEW: Compiled for ContractorConfigurator 1.0.4
+			- NEW: Failure_ResourceLeak is now more flexible in how the leak amounts are defined.  By default it functions as normal, however you can optionally specify values to be in percent of maximum resource capacity or percent of current resource level.  By adding the suffixes %t or %c respectively.
+			- NEW: Added `calculatePerTick` property to Failure_ResourceLeak.  If set to `true` then any percent values will be re-calculated each tick.  If`false` then they will only be calculated initially at the time of failure.  Default values is `false`.
+			- FIX: Leaked resources will no longer pull from other parts!
+			- FIX: Proper lowercase check for failure module names. (Thanks @magico13!)
+			- FIX: Catch situation where TriggerFailure() has no valid failures inthe list. (Thanks @magico13!)
+			- NEW: Core.dataCap is now a float percentage rather than a hard number
+			- NEW: Add API method GetMaximumFlightData() which returns the most amount of flight data possible to be gained on a part
+			- FIX: Parse leak values as en-US format
 * 2015-0517: 1.3.0.19 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ TestFlight v1.3 Experimental 13 (1.3.0.19)
 	+ KSP 1.0.2 Compatible
