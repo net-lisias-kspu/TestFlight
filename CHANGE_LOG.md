@@ -1,5 +1,9 @@
 # Test Flight :: Change log
 
+* 2015-0518: 1.3.1.1 (jwvanderbeck) for KSP 1.0
+	+ Release 1.3 (v1.3.1.1)
+	+ Change Log
+		- FIX: Incorrect KSP version in AVC file
 * 2015-0518: 1.3.1.0 (jwvanderbeck) for KSP 1.0
 	+ Test Flight v1.3.1.0
 	+ Highlights
