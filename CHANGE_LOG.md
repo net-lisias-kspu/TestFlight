@@ -1,5 +1,32 @@
 # Test Flight :: Change log
 
+* 2016-0430: 1.5.5.0 (jwvanderbeck) for KSP 1.0.5
+	+ 1.5.5.0
+	+ KSP Version
+	+ KSP 1.0.5
+	+ Highlights
+		- New optional module for working with RealFuels.  This module will only load if RealFuels is present, and if found will allow TestFlight to inject burn times into the RF EngineConfig GUI in the editor.  This means you will be able to mouse over engine configs, even unlocked ones, and see the rated burn time for that config.
+		- Multiple failures! TestFlight now allows multiple failures to stack up on a single part.  No more hoping for a "safe" failure that will block more dangerous ones.  The only limitation is a part can't have the same failure happen more than once.
+		- Multiple core.  Configs can now place multiple `TestFlightCore` modules on a single part.  Additional TestFlight modules can also be added that work with particular cores.  Each will bind to the core with the same alias.  In short this allows for essentially virtual sub-parts on a given part.  So that if you have composite parts, like say a probe core that has modules for the probe, a built in antenna, and a science experiment, you can now have those show up as actual distinct parts in TestFlight.
+		- TestFlight no longer handles repair functionality.  Parts can fail, and the TestFlight API has a call to instantly repair them, but does not itself provide any interface to the player for doing so.  The repair functionality in TestFlight was always rather bare bones, and did not really do the topic service.  Repair functionality is really a whole mode in itself and now it can be!  I may write a bare bones repair system to work with TestFlight in the future but it is my hope that someone will jump on this to make a really nice in depth repair system.
+	+ Changes
+			- FIX: Fix possible issue with adding burn times to RealFuels info if an existing description didn't already exist
+			- CHANGE: Use KSPs own formatting for the timestamp in flight log
+			- NEW: For parts with stack icons, TestFlight will now change the background of those icons when failures occur.  Orange = Minor failure, Red = Major failure.  More options for failure identification will be coming in the future
+			- CHANGE-API: `TestFlightUtil.GetFullPartName` has been removed and is no longer available.  Every module should know its part name anyway
+			- NEW: Tweakable menu will now display a R&D button for each activecore, distinguished by the Alias, and allow opening the R&D menu for that sub part directly.
+			- NEW: Major refactor to allow for multiples cores on a single part, creating essentially virtual sub parts within one part.  This involves major API changes which need to be documented.
+			- NEW-API: ITestFlightCore.Alias property returns the alias of the core configuration
+			- NEW-API: Added overloaded TestFlightUtil.GetCost() method to retrieve an active core based on alias.
+			- CHANGE: Engines now properly start their cycle at ignition rather than after clearing the tower.  NOTE: You will still not start accumulating data until the craft actually launches.
+			- FIX: Don't allow multiple instances of the same failure.
+			- NEW: Parts can now have multiple failures.  This means that after the initial failure on a part, the part can continue to receive other failures.  There is no hard limit on the number of failures that can accumulate on a part.
+			- CHANGE: TestFlight no longer handles repairs, and all repair functionality has been removed.
+			- NEW: Report rated burn time in pretty format, not just seconds.
+			- NEW: For EngineCycle modules, add rated burn time to the RealFuels config descriptions, if RealFuels is installed
+			- NEW-CONFIG: Added new property `engineConfig` to the `ITestFlightReliability_EngineCycle` module for use in RealFuels injection
+			- NEW-API: TestFlight main assembly now identifies as KSPAssembly `TestFlight`
+			- FIX: Fixed bug causing Editor Info window to display wrong amount of flight data units.
 * 2016-0411: 1.5.4.4 (jwvanderbeck) for KSP 1.0.5
 	+ 1.5.4.4
 	+ KSP Version
