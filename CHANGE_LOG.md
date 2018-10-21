@@ -1,5 +1,14 @@
 # Test Flight :: Change log
 
+* 2015-0516: 1.3.0.13 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ TestFlight v1.3 Release Candidate 2 (1.3.0.13)
+	+ KSP 1.0.2 Compatible
+	+ Important Note:
+	+ Version 1.3 of TestFlight is potentially save-game breaking.  The underlying scenario data store has changed.  While v1.3 includes code to automatically upgrade previous 1.2 save games, it might not always work.
+	+ Change Log
+		- FIX: Leaked resources will no longer pull from other parts!
+		- NEW: Failure_ResourceLeak is now more flexible in how the leak amounts are defined.  By default it functions as normal, however you can optionally specify values to be in percent of maximum resource capacity or percent of current resource level.  By adding the suffixes %t or %c respectively.
+		- NEW: Added `calculatePerTick` property to Failure_ResourceLeak.  If set to `true` then any percent values will be re-calculated each tick.  If`false` then they will only be calculated initially at the time of failure.  Default values is `false`.
 * 2015-0511: 1.3.0.12 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ TestFlight v1.3 Release Candidate 1 (1.3.0.12)
 	+ KSP 1.0.2 Compatible
