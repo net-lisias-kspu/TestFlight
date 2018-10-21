@@ -1,5 +1,12 @@
 # Test Flight :: Change log
 
+* 2016-0810: 1.7.1.0.beta-1 (jwvanderbeck) for KSP 1.1.3 PRE-RELEASE
+	+ 1.7.1.0 Beta 1
+		- This is a beta pre-release and you may experience some bugs using it.
+	+ KSP Version
+	+ KSP 1.1.3
+	+ Changes
+			- CHANGE: TestFlight no longer inserts engine rated burn times into the RealFuels GUI.  This is now handled in RealFuels itself in the latest version.
 * 2016-0708: 1.7.0.1 (jwvanderbeck) for KSP 1.1.3
 	+ 1.7.0.1
 	+ KSP Version
