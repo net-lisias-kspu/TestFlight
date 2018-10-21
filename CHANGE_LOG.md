@@ -1,5 +1,10 @@
 # Test Flight :: Change log
 
+* 2015-0208: 1.0.0.0 (jwvanderbeck) for KSP 1.0.2
+	+ [Vanguard Fails Again](http://i.ytimg.com/vi/m3y_LwN5afc/maxresdefault.jpg)
+	+ TestFlight Release 1
+	+ Here we are space cadets!  Several months of hard work has paid off and we have arrived at the full public release of TestFlight!
+	+ Thank you to everyone who assisted during the development process and to everyone who encouraged and supported the development of this mod.
 * 2015-0203: 0.4.6-RealismOverhaul (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ Alpha Release
 		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
