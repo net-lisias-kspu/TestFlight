@@ -1,5 +1,16 @@
 # Test Flight :: Change log
 
+* 2015-0210: 1.1.0.0 (jwvanderbeck) for KSP 1.0.2
+	+ TestFlight v1.1.0.0
+	+ Change Log
+		- Changed AJ10 engine config names to line up with RP-0
+		- NEW ENGINE: XLR11 (FASA Pack) -->  XLR99
+		- NEW ENGINE: LR-87-3 (FASA and AIES Packs) --> LR-87-5 --> LR-87-7 --> LR-87-9 --> LR-87-11 --> LR-87-11A
+		- NEW ENGINE: RL10A-1 (Squd, KW, and FASA Packs) -> RL10A-3-1 --> RL10A-3-3 --> RL10A-3-3A --> RL-10A-4 --> RL-10A-4-1/2 --> RL10B-2 --> RL10C-1
+		- FIX spelling error in settings window
+		- FIX #47 Parts that are destroyed or staged will now remain in the MSD for about 15 seconds giving you time to see their status
+		- FIX Incorrect LR-89 engine reference
+		- NEW Initial support for Procedural Tanks, more to come on this!
 * 2015-0208: 1.0.0.0 (jwvanderbeck) for KSP 1.0.2
 	+ [Vanguard Fails Again](http://i.ytimg.com/vi/m3y_LwN5afc/maxresdefault.jpg)
 	+ TestFlight Release 1
