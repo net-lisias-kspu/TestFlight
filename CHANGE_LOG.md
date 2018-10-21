@@ -1,5 +1,12 @@
 # Test Flight :: Change log
 
+* 2016-0708: 1.7.0.1 (jwvanderbeck) for KSP 1.1.3
+	+ 1.7.0.1
+	+ KSP Version
+	+ KSP 1.1.3
+	+ Changes
+		- FIX: Hotfix to fix issue where R&D window would fail to operate properly under certain conditions
+		- UPDATE: Updated for RealFuels 11.3.1
 * 2016-0705: 1.7.0.0 (jwvanderbeck) for KSP 1.1.3
 	+ 1.7.0.0
 	+ KSP Version
