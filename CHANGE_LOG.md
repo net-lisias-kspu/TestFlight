@@ -1,5 +1,20 @@
 # Test Flight :: Change log
 
+* 2015-0203: 0.4.6-RealismOverhaul (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ Alpha Release
+		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
+	+ Change Log
+		- FIX #21  When triggering a random failure, skip ones marked as disabled
+		- FIX #22 Only add positive flight data.  Should resolve issue with 0 or negative du showing in MSD
+		- NEW #23 Parts can now gain bonus flight data when they fail, and when failures are repaired.  After all, we're supposed to learn from our failures!  New properties `duFail` and `duRepair` added to Failure modules and implemented automatically by the base class.
+		- NEW #26 Failures can be "one-shot" which means the bad stuff from the failure happens but the part is not placed into a failed state and continues to operate (if possible).  New property `oneShot` added to Failure modules.
+		- NEW #29 Support for EngineIgnitor mod.  The IgnitionFail Failure Module can optionally restore a used up ignition when it fails.  New property `restoreIgnitionCharge` added to TestFlightFailure_IgnitionFail Module
+		- FIX EngineCycle Reliability was incorrectly modifying Base Failure Rate, and was being enabled when it should have been.  Both issues fixed.
+		- NEW #31 Instead of defining a reliabilityCurve for every one of the possible 33 scopes, even when they were the same, a "default" scope curve can now be used and TestFlightReliability will use the default scope if a specific one is not found.
+			- [RealismOverhaul] Removed accidental double definition of Aerobee-150.
+			- [RealismOverhaul] Re-added use of IgnitionFail failure after bugs were fixed.
+			- [RealismOverhaul] Added large chance of ignition failure to X-405 Vanguard.
+			- [RealismOverhaul] WAC-Corporal/Aerobee Line, X-405, and AJ-10-37/42 all use EngineCycle Reliability now, which defines a "bathtub" curve for reliability over the expected operating cycle of the engine, based on real manufacturer specs.  This means the engine will have an increase in failure rate for the first few seconds of operation, smooth out to normal Base Failure Rate for the "Rated Burn Time" of the engine, and the the failure rate will slowly start increasing as the engine exceeds the manufacturer's "Rated Burn Time".  Rated burn times: WAC/Aerobee: 47 seconds, X-405: 145 seconds, AJ-10-37/42:L 115 seconds.
 * 2015-0206: 0.4.6.2-Stock (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ Alpha Release
 		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
