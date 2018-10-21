@@ -1,5 +1,13 @@
 # Test Flight :: Change log
 
+* 2017-0320: 1.8.0.0 (jwvanderbeck) for KSP 1.2.2
+	+ 1.8.0.0
+	+ KSP Version
+	+ KSP 1.2.2
+	+ Changes
+			- FIX: TestFlightHUD tries to access an invalid MasterStatusItem if CurrentVessel isn't tracked, or vessel change occurs. Should fix #155
+			- NEW: Updated for KSP 1.2.2
+			- CHANGE: Removed `TestFlightRF` assembly.  TestFlight no longer inserts burn times into RealFuels GUIs.  This functionality now lives within RealFuels itself.
 * 2016-0810: 1.7.1.0.beta-1 (jwvanderbeck) for KSP 1.1.3 PRE-RELEASE
 	+ 1.7.1.0 Beta 1
 		- This is a beta pre-release and you may experience some bugs using it.
