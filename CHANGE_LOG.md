@@ -1,5 +1,34 @@
 # Test Flight :: Change log
 
+* 2016-0308: 1.5.2.0 (jwvanderbeck) for KSP 1.0
+	+ 1.5.2.0
+	+ IMPORTANT
+		- This release has some changes and fixes that can affect existing saves and .craft files.
+		- A change to how part names are determined will cause some parts to be registered with a new name that no longer matches what might already be stored in the save file.  In this case those parts will reset to 0 data!
+		- A fix to how data is persisted in the .craft files has been fixed.  This bug could cause saved .craft to not initialize properly and thus never gain any data from previous flights.  This bug has been fixed however the fix is not retroactive and thus will only affect new saved craft and not fix old ones.
+	+ CHANGES
+			- CHANGE: TestFlightReliability_DynamicPressure - Clamp evaluated dynamic pressure reliability curve to `TestFlightUtil.MIN_FAILURE_RATE`
+			- CHANGE: DynamicPressure minimum modifer value now configurable
+			- CHANGE: TestFlightContracts linked to latest version (1.9.7) of ContractConfigurator
+			- CHANGE Support Passive RT antennas as well.
+			- API CHANGE: `TestFlightScenario.AddValue` methods have been renamed to `SetValue` as that more accurately represents how they function (setting an absolute value).  New methods have been added to the Scenario called `AddValue` that do just that, taking the existing stored value and adding to it.  Obviously not available for `string` and `bool` types.
+			- API NEW: Added `TestFlightScenario.ToggleValue(string key, booldefaultValue)`.  This method will either take the existing stored value and set the opposite (so false to true, true to false) or if there is no existing value it will set the `defaultValue`
+			- FIX Part.name is unreliable. Use a corrected version of the part name (code borrowed from RealFuels) that should be reliable.
+		- Spelling ftw
+			- FIX: Fixed duplicate TestFlightInterop modules on some parts that could cause errors on the RL10x2 series and LR91-AJ series engines
+			- NEW: Light bulb flickering failure
+			- NEW: MaxQ reliability module to lower reliability at high Q
+			- FIX: Science failures now have experimentID to support multiple experiments
+			- CHANGE Start XLR11 at 0 data.
+			- FIX Increase data rates for XLR11, XLR99.
+			- CHANGE ResourceLeak now supports resource to leak "all"; persistence fixed, refactored to use leak lists.
+			- FIX Update resource leaking to use fixed timesteps rather than realtime.
+			- FIX Engine fixes. Flight Data Recorder (Engines) binds to first engine on the part. The failure modules grab all engines matching passed spec, defaulting to 'all' engines on the part. The wrapper is cleaned up and does not use scriptable objects anymore. Also fixed some KSPFielding and now don't recalculate dynamic pressure.
+			- FIX: EngineModuleWrapper spam removed by properly treating ScriptableObject as Unity requires.  Because reasons.
+			- FIX: XLR11, XLR99 configs to apply to all of them (use different MM pattern). Fix LR91 part matches for other LR91s.
+			- CHANGE: Remove unneeded persistence flags.
+			- FIX: Proper data initialization for saved .craft files.  NOTE: Fix is not retroactive and will only work properly on new saved craft.
+			- FIX: Properly accumulate flightData when multiple parts with the same underlying part name are on a vessel.  Fixes #101
 * 2016-0229: 1.5.1.0 (NathanKell) for KSP 1.0
 	+ 1.5.1.0
 		- FIX: Do a pass to further clean up burn times
