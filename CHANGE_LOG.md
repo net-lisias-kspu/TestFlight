@@ -1,5 +1,7 @@
 # Test Flight :: Change log
 
+* 2016-0402: 1.5.4.1.beta-2 (jwvanderbeck) for KSP 1.0 PRE-RELEASE
+	+ FIX: Fix major bug in FloatCurve handling that was causing TestFlightFailure_IgnitionFail and TestFlightReliability_EngineCycle to both not apply proper failure chances
 * 2016-0328: 1.5.4.0 (jwvanderbeck) for KSP 1.0
 	+ 1.5.4.0
 	+ Highlights
