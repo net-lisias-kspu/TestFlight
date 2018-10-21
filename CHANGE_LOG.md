@@ -1,5 +1,26 @@
 # Test Flight :: Change log
 
+* 2015-0108: 0.2.1e2 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ This is an EXPERIMENTAL release.  Experimental releases are very much "development snapshots" and are released for the express purpose of getting user feedback or testing on a very specific bug or feature that is being worked on.  If testing an experimental release, please limit feedback to the scope of that release.
+	+ This is an alpha release and thus should be assumed to be buggy, and capable of breaking your game and game saves.
+	+ Experimental release of the new reworked GUI.  This is still very much a WIP.
+	+ This release implements the new TestFlight GUI skin, addresses issues in Experimental 1, and adds a new compact Flight HUD.
+		- New TestFlight GUI Theme designed for clarity
+		- Settings pane is now split into multiple "sections", each of which can be selected from the drop down list at the top of the settings pane.
+		- The Master Status Display now has a maximum height for display of the part status.  If too many parts need to be displayed, the GUI will start to scroll instead.
+		- Added scroll view for Part Display
+		- Added filter to show only failed parts in Master Status Display
+		- Added setting to set size of scroll view in one of three increments, Small, Normal, or Large
+		- Added setting to hide/show flight data on part
+		- Added setting to hide/show resting reliability on part
+		- Added setting to hide/show momentary reliability on part
+		- Added setting to hide/show part status text
+		- Added setting to truncate/shorten display names for parts
+		- Added setting to lock/unlock the Master Status Display window
+		- Added setting to enable/disable the compact Flight HUD
+		- Added new compact Flight HUD which displays _only_ the parts that have failed, and a repair button.  Part names are colored for quick identification of the severity of the failure.  Green = Minor, Yellow = Normal, Red = Critical
+		- Moving the Master Status Display (after unlocking it) now saves the window's position
+		- Moving the Flight HUD save's the windows position
 * 2014-1231: 0.2.0 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ This is an alpha release and thus should be assumed to be buggy, and capable of breaking your game and game saves.
 		- New Recorder module, FlightDataRecorder_Resources, only records flight data while the part has stored resources.
