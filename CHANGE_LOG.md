@@ -1,5 +1,12 @@
 # Test Flight :: Change log
 
+* 2016-0525: 1.6.0.4.beta-1 (jwvanderbeck) for KSP 1.1.2 PRE-RELEASE
+	+ 1.6.0.4 Beta 1
+		- Beta Release
+	+ KSP Version
+	+ KSP 1.1.2
+	+ Changes
+		- Potential fix for icon issues with QuickHide mod.  Currently only applies to the Flight window.
 * 2016-0520: 1.6.0.3 (jwvanderbeck) for KSP 1.1.2
 	+ 1.6.0.3
 	+ KSP Version
