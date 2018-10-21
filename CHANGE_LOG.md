@@ -1,5 +1,11 @@
 # Test Flight :: Change log
 
+* 2016-0501: 1.6.0.0 (jwvanderbeck) for KSP 1.1.2
+	+ 1.6.0.0
+	+ KSP Version
+	+ KSP 1.1.2
+	+ Changes
+	+ None.  This release is v1.5.5 compiled for KSP 1.1.2
 * 2016-0430: 1.5.5.0 (jwvanderbeck) for KSP 1.0.5
 	+ 1.5.5.0
 	+ KSP Version
