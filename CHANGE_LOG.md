@@ -1,5 +1,13 @@
 # Test Flight :: Change log
 
+* 2015-0203: 0.4.5.1-RealismOverhaul (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ Alpha Release
+		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
+	+ Change Log
+		- Removed IgnitionFail failure from Aerobee because it has some bugs
+		- Tweaked Aerobee reliability and tech transfer values
+		- Added initial config for X-405 Vanguard
+		- Added initial config for AJ-10-37 and AJ-10-47
 * 2015-0202: 0.4.2 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ Alpha Release
 		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
