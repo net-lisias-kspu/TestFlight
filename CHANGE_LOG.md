@@ -1,5 +1,35 @@
 # Test Flight :: Change log
 
+* 2015-1123: 1.4.0.0 (jwvanderbeck) for KSP 1.0 PRE-RELEASE
+	+ TestFlight v1.4.0.0
+		- FIX: Fixes Issue #82 LR-105 engine misconfigured in RO configs
+		- NEW Configs: Added LR-91 (-5, -7, -9, -11, -11A models) configs to the FASA Gemini LR-91 model.  Thanks @stratochief66!
+		- API Changed: `baseFailureRate` and `momentaryFailureRate`, as well as momentary failure rate modifiers are all treated internally as doubles now for extra precision with very small failure rates. All API calls utilizing any of these values now return and expect doubles.
+		- NEW Configs: Added new property to TestFlightCore,
+		- `failureRateModifier` which defaults to 1.  This is a flat, fixed,
+		- modifier applied to the calculated baseFailureRate which can be used to
+		- force smaller values than is possible normally due to 32 bit
+		- restrictions in KSP.
+			- NEW: In order to accommodate very small failure rates, the core
+		- has been reworked to use 64 bit double precision floats internally.
+		- This allows failure rates as low as .00000000000001.  However, KSP
+		- itself will not persist doubles, only floats.  Further more, by their
+		- very nature FloatCurves, which are used to define the failure rate
+		- curves, have to be floats.  This means that while internally the
+		- failure rate can be much lower than before, KSP will still only allow
+		- you to specify failure rate values down to .0000001 (This is one
+		- significant digit lower than previous).  In order to get even smaller
+		- values than that, use the new property on TestFlightCore
+		- `failureRateModifier` to force it even lower.  Setting both the
+		- failureRate and the failureRateModifier to the smallest float value of
+			- 0000001 will result in a calculated failureRate internally of the min
+		- rate, .00000000000001
+				- CHANGED Configs: Update RO configs for RO 10.0
+				- Aerobee configs were renamed
+				- RL, AJ, and LR no longer have a dash (Only the last was relevant here)
+				- NEW: Recompiled for KSP v1.0.5
+				- CHANGED: Updated ContractConfigurator to 1.8.1
+				- NEW: Added support for lots of different parts thanks to the awesome work of @anxcon.  New part support includes: Avionics, Docking Rings, FAR Control Surfaces, Gimbals, Reaction Wheels, Solar Panels, Heat Shields and more! Major thanks to @anxcon
 * 2015-0518: 1.3.1.1 (jwvanderbeck) for KSP 1.0
 	+ Release 1.3 (v1.3.1.1)
 	+ Change Log
