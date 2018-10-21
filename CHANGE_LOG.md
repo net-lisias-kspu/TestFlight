@@ -1,5 +1,19 @@
 # Test Flight :: Change log
 
+* 2015-0501: 1.3.0.10 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ TestFlight v1.3 Experimental (1.3.0.10)
+		- This is an experimental development release and should only be used to provide testing feedback
+		- Things to test
+	+ If you are helping test this experimental, thank you!.  Things to look for:
+		- NOTE: For proper testing of this build, it should be tested on a normal live save game.  However please make a backup of your save game first!
+	+ 1. This version is a major change to how data is stored in KSP's persistent.sfs file, and would normally be save game breaking. However I have added code to automatically migrate the saved data from the old format to the new format the first time you load and then save your game. Easiest way to do this is just load your game, then immediately exit to the main menu.
+	+ 2. Everything should work exactly as before, with the obvious difference being no more scopes.
+	+ Change Log
+			- FIX: NREs caused by save game without existing data store
+			- FIX: When part’s start at MaxData they start at properly the maximum
+		- data defined by the ReliabilityCurve and not some insane high value.
+			- NEW: Added save game settings to the KSC level TestFlight settings window
+			- FIX: Engines would continue gaining data when shutown. Engines now use finalThrust to determine running state
 * 2015-0429: 1.3.0.9 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ TestFlight v1.3 Experimental (1.3.0.9)
 		- This is an experimental development release and should only be used to provide testing feedback
