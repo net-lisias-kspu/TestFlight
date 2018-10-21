@@ -1,5 +1,12 @@
 # Test Flight :: Change log
 
+* 2015-0126: 0.4.0e7 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ Experimental Release
+		- This is an experimental release of a development branch.  This version is released to allow people to test upcoming changes and should be considered unstable and buggy.  Do not use an experimental release in any save you care about.
+	+ Change Log
+		- Added new API methods to control flow of Flight Data
+			- SetDataRateLimit()
+			- SetDataCap()
 * 2015-0111: 0.3.0 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ Alpha Development Release
 		- This is an early alpha development release and thus should be assumed to be buggy, and capable of breaking your game and game saves.  Please do not test this in a game save that you care about!
