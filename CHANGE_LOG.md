@@ -1,5 +1,21 @@
 # Test Flight :: Change log
 
+* 2015-0228: 1.2.1.0 (jwvanderbeck) for KSP 1.0.2
+	+ v1.2.1.0
+		- FIX: UI: Fixed Master Status Display getting into a bad UI state when failed parts where removed from the vessel, which caused other Non-TF Windows to get temporarily broken
+		- CONFIGS: Restore ignition charges on the pad but not in the air
+		- FAILURES: IgnitionFail: Don't apply pressureCurve if it evaluates to 0
+		- FAILURES: IgnitionFail: Always restore ignition charge if in PRELAUNCH situation
+		- UI: Updated timestamp on FlightLogger to better match stock KSP entries
+		- CONFIG: Updated all engines with new pressure based IgnitionFail configs
+		- CONFIG: Updated FloatCurve tangents on all configured parts
+		- CONFIG: The KW part representing 2xRL10 engines now records data at twice the rate
+		- UI: Tighter GUI popping to hopefuly reduce clashes between mods
+		- FIX: #53 OneShot failures weren't being triggered
+		- CONFIG: Restore ignition charge on all IgnitionFail failures
+		- FAILURES: Allow IgnitionFail to scale based on dynamic pressure
+		- UI: Add failures to F3 Flight Log along with MET timestamp
+		- CONFIG: Add low tech transfer from Aerobee line to AJ10 Early line
 * 2015-0225: 1.2.0.0 (jwvanderbeck) for KSP 1.0.2
 	+ Highlights
 	+ This version of TestFlight includes some major changes including a brand new Interop API that allows mods that have dynamic parts to work with TestFlight.  In addition there are many config changes to sync up with the latest versions of Realism Overhaul and RP-0.
