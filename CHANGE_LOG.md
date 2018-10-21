@@ -1,5 +1,11 @@
 # Test Flight :: Change log
 
+* 2016-0409: 1.5.4.3 (jwvanderbeck) for KSP 1.0
+	+ 1.5.4.3
+	+ KSP Version
+	+ KSP v1.0.5
+	+ Changes
+		- FIX: Fixed PluginDir not being created on fresh installs which would prevent any settings from being saved
 * 2016-0402: 1.5.4.2 (jwvanderbeck) for KSP 1.0
 	+ Hotfix
 	+ KSP Version: 1.0.5
