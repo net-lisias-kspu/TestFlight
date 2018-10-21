@@ -1,5 +1,8 @@
 # Test Flight :: Change log
 
+* 2016-0225: 1.5.0.0 (anxcon) for KSP 1.0
+	+ NEW: Hands on research! A mechanic (available to cfg modders) to use part data as science discounts in tech tree nodes the part is present in.
+	+ NEW: Failures for RemoteTech and parts using ModuleScienceExperiment
 * 2015-1123: 1.4.0.2 (jwvanderbeck) for KSP 1.0
 	+ TestFlight v1.4.0.2
 		- FIX: Fixes Issue #82 LR-105 engine misconfigured in RO configs
