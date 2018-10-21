@@ -1,5 +1,15 @@
 # Test Flight :: Change log
 
+* 2015-0205: 0.4.6.1-RealismOverhaul (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ Alpha Release
+		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
+	+ Change Log
+		- ShutdownEngine failure should now also shutdown the visual effects playing with certain mods like RealPlume/Smoekscreen
+		- ShutdownEngine failure now uses the common EngineModuleWrapper
+		- ReducedMaxThrust should now work properly with RF/MFT or any other ModuleEngineConfigs based mod
+		- TestFlight now has AVC .version files.  It does not include miniAVC, but if you are using the full AVC mod (which I highly suggest because its awesome) you should now be notified of updates
+		- TestFlight now generates CKAN files so should be on CKAN soon
+		- FIX Fixed a bug in Failure modules that was preventing the `duFail` and `duRepair` properties from working.  Unfortunately due to the way KSP works, you will need to create new craft for this fix to take effect.  Any existing craft or saved .craft files will not work.
 * 2015-0203: 0.4.5-Stock (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ Alpha Release
 		- This is an Alpha Development Release and thus should be assumed to contain bugs that may or make not break your game.  Use of this release in a clean test save game is highly recommended.
