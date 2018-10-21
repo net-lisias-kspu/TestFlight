@@ -1,5 +1,20 @@
 # Test Flight :: Change log
 
+* 2016-0317: 1.5.3.0 (jwvanderbeck) for KSP 1.0
+	+ NEW: New Failure module EnginePerformanceLoss causes the engine's Isp to degrade by an amount specified in the config property `ispMultiplier`.  A second property `ispMultiplierJitter` can be used to add some small extra random variance to the degredation
+	+ NEW: TestFlightInterop now adds an intervop value named `kspPartName` which is the internal KSP name of the underlying part.  This does not change.  Can be used in config queries and should be used instead of blank queries or queries with just part names.  `config = kspPartName = squadFoo`.
+	+ CHANGE: Internally, any empty configuration string is coerced into `kspPartname = squadFoo` using the new interop value and the parsed part name.
+	+ FIX: If a part has starting flight data from the config, add that to the scenario data store when first initializing it.  Should fix issue with needing to record _past_ the startFlightData before it would stick.
+	+ NEW-API: Added `TestFlightPartData.AddValue` and overloaded versions for int, float, and double that do what it says on the tin.
+	+ NEW-API: Added `TestFlightPartData.ToggleValue` for bools
+	+ NEW-API: Added`TestFlightManagerScenario.AddFlightDataForPartName` helper function to add to existing flight data for a part.
+	+ CHANGE-API: Renamed `TestFlightPartData.AddValue` to `TestFlightPartData.SetValue` following in accordance with the previous similar change to TestFlightManagerScenario which wraps these for convenience.
+	+ CHANGE: Removed persistence from `TestFlightCore.startFlightData`as it is not dynamic.
+	+ CHANGE: TestFlightFailure_ResourceLeak - Use System.Random from TestFlightCore instead of Unity's broken random.
+	+ CHANGE: All RealismOverhaul configs have been removed from TestFlight and are now managed and provided by Realism Overhaul directly.
+	+ CHANGE: TestFlight Realism Overhaul Config pack is no longer built or provided by TestFlight.
+	+ CHANGE: Removed Aerobee engine line from RealismOverhaul configs, as these configs now live in the RO project
+	+ NEW: Reliability modules for SkinTemperature and InternalTemperature
 * 2016-0308: 1.5.2.0 (jwvanderbeck) for KSP 1.0
 	+ 1.5.2.0
 	+ IMPORTANT
