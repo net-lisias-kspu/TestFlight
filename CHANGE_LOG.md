@@ -1,5 +1,23 @@
 # Test Flight :: Change log
 
+* 2015-0429: 1.3.0.6 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ TestFlight v1.3 Experimental (1.3.0.6)
+		- This is an experimental development release and should only be used to provide testing feedback
+		- Things to test
+	+ If you are helping test this experimental, thank you!.  Things to look for:
+		- NOTE: For proper testing of this build, it should be tested on a normal live save game.  However please make a backup of your save game first!
+	+ 1. This version is a major change to how data is stored in KSP's persistent.sfs file, and would normally be save game breaking. However I have added code to automatically migrate the saved data from the old format to the new format the first time you load and then save your game. Easiest way to do this is just load your game, then immediately exit to the main menu.
+	+ 2. Everything should work exactly as before, with the obvious difference being no more scopes.
+	+ Change Log
+			- FIX: Fix possible infinite loop when the TestFlightCore had a configuration without query in it
+			- FIX: If TestFlight title property is not defined or blank, use the part's stock title instead
+			- NEW: Allow any module to have a blank or undefined config. In such cases it is considered always active
+			- NEW: Stock Configs: Added RT5, RT10, BACC, and Kickback solid boosters
+			- NEW: Stock Configs: Added: LV-T30, LV-T45, LV-909, Poodle, Skipper, Mainsail liquid engines
+			- FIX: Fixed incorrect configuration tags on stock solid engines
+			- NEW: First tier stock liquid and solid engines start at max data
+		- already researched
+			- NEW: WAC-Corporal and XLR11 start fully tested
 * 2015-0428: 1.3.0.5 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ TestFlight v1.3 Experimental (1.3.0.4)
 		- This is an experimental development release and should only be used to provide testing feedback
