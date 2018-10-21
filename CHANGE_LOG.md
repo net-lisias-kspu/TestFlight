@@ -1,5 +1,24 @@
 # Test Flight :: Change log
 
+* 2015-0225: 1.2.0.0 (jwvanderbeck) for KSP 1.0.2
+	+ Highlights
+	+ This version of TestFlight includes some major changes including a brand new Interop API that allows mods that have dynamic parts to work with TestFlight.  In addition there are many config changes to sync up with the latest versions of Realism Overhaul and RP-0.
+		- VERY IMPORTANT: If you use RealFuels, RealismOverhaul, or RP-0 you will need to get the latest versions of those mods, being released in sync with this version of TestFlight, to ensure continued proper operation.  If you do not, TestFlight will not properly attach to parts.
+	+ Change Log
+		- New Interop API allows mods that make dynamic parts, such as RealFuels and Procedural Parts, to connect with TestFlight and provide data that identifies parts by those dynamic properties.
+		- Totally reworked configs pre-processor makes it easier to update and add new part configs
+		- New Query System allows for far more control in configs as to what modules apply to what
+		- Support for failure modules to operate on specific engines in a part when a part has more than one engine module.
+		- You can now see the rated burn time on engines in the VAB
+		- Fixed some benign NREs
+		- Possible fix for the TestFlight MSD sometimes going blank and taking half the UI with it for a few seconds
+		- Updates to several engine configs including LR-89, LR-105, and AJ10 series engines to match current configs in RealismOverhaul/RP-0
+		- Fixed a bug that sometimes prevented TestFlight from properly determining state change of an engine from NOT_IGNITED to IGNITED
+		- Fix bug in settings window where your last view settings page was not properly restored upon loading the window
+		- EngineModuleWrapper and all Engine based Failure Modules now support two ways of addressing specific ModuleEngines and ModuleEnginesFX on a part; Index and engineID
+		- Added new Diffuculty Setting to make all parts operate under a Single Scope rather than distinct scopes based on craft location & situation
+		- If a part uses the TestFlightReliability_Engine module, the rated burn time for the engine as well as the burn through time and penalty is now listed in part's "Info" window in the VAB.
+		- New part aliasing feature allows configs to change without loss of flight data in most cases.  Also allows multiple parts to be treated as the same part.
 * 2015-0210: 1.1.0.0 (jwvanderbeck) for KSP 1.0.2
 	+ TestFlight v1.1.0.0
 	+ Change Log
