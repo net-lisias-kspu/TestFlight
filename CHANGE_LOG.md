@@ -1,5 +1,7 @@
 # Test Flight :: Change log
 
+* 2016-0225: 1.5.0.1 (anxcon) for KSP 1.0
+	+ minor fix to avoid a possible issue
 * 2016-0225: 1.5.0.0 (anxcon) for KSP 1.0
 	+ NEW: Hands on research! A mechanic (available to cfg modders) to use part data as science discounts in tech tree nodes the part is present in.
 	+ NEW: Failures for RemoteTech and parts using ModuleScienceExperiment
