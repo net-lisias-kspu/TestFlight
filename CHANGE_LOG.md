@@ -1,5 +1,13 @@
 # Test Flight :: Change log
 
+* 2015-0314: 1.2.2.0 (jwvanderbeck) for KSP 1.0.2
+	+ v1.2.2.0
+		- NEW: UI: New TestFlight window available at Space Center that will contain new features in the future.  For now can be used to modify global settings.
+		- FIX: Remember last MET upon reload
+		- FIX: FAILURES: Set initial engine ignition state based on current engine ignition state rather than UNKNOWN
+		- FIX: Persist operatingTime on the part so that loading a game doesn't mess up the timer
+		- FIX: FAILURES: IgnitionFail fallback to 100% baseIgnitionChance if not defined in configs
+		- UI: Reduced logging in Editor scene
 * 2015-0228: 1.2.1.0 (jwvanderbeck) for KSP 1.0.2
 	+ v1.2.1.0
 		- FIX: UI: Fixed Master Status Display getting into a bad UI state when failed parts where removed from the vessel, which caused other Non-TF Windows to get temporarily broken
