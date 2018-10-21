@@ -1,5 +1,15 @@
 # Test Flight :: Change log
 
+* 2016-0229: 1.5.1.0 (NathanKell) for KSP 1.0
+	+ 1.5.1.0
+		- FIX: Do a pass to further clean up burn times
+		- NEW: Add new LR87-LH2 config.
+		- FIX: Correct LR91 burn time cycles.
+		- NEW: Add LR91-AJ-3; fix LR87/91 config names for next RO.
+		- FIX:  Fix ignition pressure curves, remove Agena and LR89/105 configs (done in RO).
+		- NEW: Add AJ10-early comments.
+		- CHANGE: Update AJ10-early configs for new RO.
+		- CHANGE: Update Examples.txt. Added example config for failures to FARControllableSurface module
 * 2016-0225: 1.5.0.1 (anxcon) for KSP 1.0
 	+ minor fix to avoid a possible issue
 * 2016-0225: 1.5.0.0 (anxcon) for KSP 1.0
