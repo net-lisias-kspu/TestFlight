@@ -1,5 +1,37 @@
 # Test Flight :: Change log
 
+* 2015-0111: 0.3.0 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
+	+ Alpha Development Release
+		- This is an early alpha development release and thus should be assumed to be buggy, and capable of breaking your game and game saves.  Please do not test this in a game save that you care about!
+		- IMPORTANT NOTE Due to many changes in how settings are handled, and stored, as well as the removal and addition of different settings than previous releases, please completely delete any previous install of TestFlight before installing this version.  In addition it is _highly recommended_ to start a new save game for this release.
+	+ Highlights
+		- Brand new TestFlight GUI
+		- Configurable Master Status Display gives you all the details on your parts you want, and nothing more
+		- Settings GUI lets you change TestFlight settings easily in game
+		- In Flight HUD gives you a compact view of the most critical information
+		- Rebuilt underlying persistent handling to hopefully be more reliable
+	+ All new TestFlight GUI
+		- [Image of blah](http://i.imgur.com/SwjKCQl.png)
+			- New Master Status Display is highly configurable and automatically scrolls to hand craft with lots of parts.  You can turn on/off all data displays with the exception of the part name (which you can shorten) and the Repair/Acknowledge buttons. _NOTE: The Momentary Reliability data is a temporary placeholder and will never contain any data in this release_
+			- New tooltip for repair requirements uses color highlighting to let you quickly see which conditions are met (green), which are not(red), and which are not met but optional (orange).
+			- You can set the size of the main MSD to one of three preset sizes, Small, Normal, or Large which will adjust how tall the window is and how many parts you can see before scrolling.
+			- MSD can be filtered to show only failed parts.  Repairing or Acknowledging a failure will remove it from the list.
+			- New In Flight HUD provides a compact status display that shows only failed parts, and shows only the name of the part and the buttons to repair or acknowledge the failure.  Part coloring in this HUD quickly identifies the severity of the failure (Green = minor, orange = normal, red = critical).
+			- MSD can be docked, or unlocked and moved
+	+ Change Log
+			- Added entirely new Master Status Display (MSD) for TestFlight
+			- Added settings window for configuring TestFlight settings in game
+			- Added ability to independently toggle on or off various pieces of part status in the MSD
+			- Added new compact in flight HUD that can be toggled on/off and positioned as desired
+			- MSD can be either docked, or unlocked and moved around
+			- MSD now scrolls if there are too many parts to fit
+			- MSD height is adjustable
+			- Settings pane broken into multiple pages so as to not require a huge window
+			- Repair Requirements tooltip is now color coded for clarity and quick assimilation of data
+			- Fixed spelling error in settings dialog
+			- Added button to "acknowledge" a failure.  This will clear it from the Flight HUD and the MSD if set to show only failed parts, but will not repair the failure.  It will still remain in the full MSD list (If the show only failed parts setting is OFF)
+			- Added the failure title to the tooltip of the Flight HUD
+			- Rebuilt ScenarioModule to provide a more reliable data store
 * 2015-0102: 0.2.1 (jwvanderbeck) for KSP 1.0.2 PRE-RELEASE
 	+ This is an alpha release and thus should be assumed to be buggy, and capable of breaking your game and game saves.
 		- Fixed Master Status Display not showing some failures
