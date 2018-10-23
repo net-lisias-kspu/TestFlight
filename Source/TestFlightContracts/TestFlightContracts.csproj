@@ -5,6 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{2FC310C3-6160-4334-831F-573F0D5D98E2}</ProjectGuid>
     <OutputType>Library</OutputType>
+    <BaseIntermediateOutputPath>..\..\obj\TestFlightContracts</BaseIntermediateOutputPath>
     <RootNamespace>TestFlightContracts</RootNamespace>
     <AssemblyName>TestFlightContracts</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
@@ -14,46 +15,33 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
+    <OutputPath>..\..\bin\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="cp ${TargetFile} ${TargetDir}/../../../GameData/TestFlight/Plugins" />
-      </CustomCommands>
-    </CustomCommands>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <OutputPath>..\..\bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <CustomCommands>
-      <CustomCommands>
-        <Command type="AfterBuild" command="cp ${TargetFile} ${TargetDir}/../../../GameData/TestFlight/Plugins" />
-      </CustomCommands>
-    </CustomCommands>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(KSP_DLL_PATH)\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>$(KSP_DLL_PATH)\Assembly-CSharp-firstpass.dll</HintPath>
+      <HintPath>..\..\..\..\..\LIB\managed\1.4.1\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>$(KSP_DLL_PATH)\UnityEngine.dll</HintPath>
+      <HintPath>..\..\..\..\..\LIB\managed\1.4.1\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="ContractConfigurator">
-      <HintPath>$(KSP_DLL_PATH)\ContractConfigurator.dll</HintPath>
-    </Reference>
-    <Reference Include="KSPUtil">
-      <HintPath>$(KSP_DLL_PATH)\KSPUtil.dll</HintPath>
+      <HintPath>..\..\..\..\..\LIB\plugins\ContractConfigurator.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +49,7 @@
     <Compile Include="TestFlightContractConfigurator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestFlightAPI\TestFlightAPI\TestFlightAPI.csproj">
+    <ProjectReference Include="..\TestFlightAPI\TestFlightAPI.csproj">
       <Project>{F212E235-8856-4C7E-AFA9-051490E1350F}</Project>
       <Name>TestFlightAPI</Name>
     </ProjectReference>
@@ -69,5 +57,4 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
   </PropertyGroup>
-  <Import Project="custom.targets" />
 </Project>

@@ -5,11 +5,13 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlight", "Source\TestFlight\TestFlight.csproj", "{411F2FC2-8E31-4FDB-9F69-E202E7B4081A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlightCore", "Source\TestFlightCore\TestFlightCore\TestFlightCore.csproj", "{CD4D0CF1-16A8-4FB9-A7CC-6566160B8CD2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlightAPI", "Source\TestFlightAPI\TestFlightAPI\TestFlightAPI.csproj", "{F212E235-8856-4C7E-AFA9-051490E1350F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlightCore", "Source\TestFlightCore\TestFlightCore.csproj", "{CD4D0CF1-16A8-4FB9-A7CC-6566160B8CD2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlightContracts", "Source\TestFlightContracts\TestFlightContracts.csproj", "{2FC310C3-6160-4334-831F-573F0D5D98E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlightAPI", "Source\TestFlightAPI\TestFlightAPI.csproj", "{F212E235-8856-4C7E-AFA9-051490E1350F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFlightRF", "Source\TestFlightRF\TestFlightRF.csproj", "{ACF86439-AE81-4118-B703-2BBACC483B7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,16 +35,18 @@ Global
 		{F212E235-8856-4C7E-AFA9-051490E1350F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F212E235-8856-4C7E-AFA9-051490E1350F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F212E235-8856-4C7E-AFA9-051490E1350F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACF86439-AE81-4118-B703-2BBACC483B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACF86439-AE81-4118-B703-2BBACC483B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACF86439-AE81-4118-B703-2BBACC483B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACF86439-AE81-4118-B703-2BBACC483B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
-		$1.DirectoryNamespaceAssociation = None
-		$1.ResourceNamePolicy = FileFormatDefault
 		$0.TextStylePolicy = $2
-		$2.inheritsSet = VisualStudio
-		$2.inheritsScope = text/plain
 		$2.scope = text/x-csharp
+		$2.FileWidth = 80
+		$2.TabsToSpaces = True
 		$0.CSharpFormattingPolicy = $3
 		$3.IndentSwitchBody = True
 		$3.IndentBlocksInsideExpressions = True
@@ -68,15 +72,29 @@ Global
 		$3.BeforeDelegateDeclarationParentheses = False
 		$3.NewParentheses = False
 		$3.SpacesBeforeBrackets = False
-		$3.inheritsSet = Mono
-		$3.inheritsScope = text/x-csharp
 		$3.scope = text/x-csharp
+		$3.IndentSwitchSection = False
+		$3.NewLinesForBracesInProperties = False
+		$3.NewLinesForBracesInAccessors = False
+		$3.NewLinesForBracesInAnonymousMethods = False
+		$3.NewLinesForBracesInControlBlocks = False
+		$3.NewLinesForBracesInAnonymousTypes = False
+		$3.NewLinesForBracesInObjectCollectionArrayInitializers = False
+		$3.NewLinesForBracesInLambdaExpressionBody = False
+		$3.NewLineForElse = False
+		$3.NewLineForCatch = False
+		$3.NewLineForFinally = False
+		$3.NewLineForMembersInObjectInit = False
+		$3.NewLineForMembersInAnonymousTypes = False
+		$3.NewLineForClausesInQuery = False
+		$3.SpacingAfterMethodDeclarationName = True
+		$3.SpaceAfterMethodCallName = True
+		$3.SpaceBeforeOpenSquareBracket = True
 		$0.TextStylePolicy = $4
-		$4.inheritsSet = VisualStudio
-		$4.inheritsScope = text/plain
 		$4.scope = text/plain
+		$4.FileWidth = 80
+		$4.TabsToSpaces = True
 		$0.VersionControlPolicy = $5
-		$5.inheritsSet = Mono
 		version = 0.4.0
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
